@@ -1,0 +1,10 @@
+#!/bin/bash
+
+## Created By Aditya Shakya
+
+#rofi -modi run,drun -show drun -line-padding 4 -columns 1 -width 25 -lines 10 -padding 25 -hide-scrollbar -show-icons -drun-icon-theme "Papirus" -font "Fantasque Sans Mono 10"
+#rofi -modi run,drun -show drun -location 1 -show-icons -drun-icon-theme "Papirus" -font "Fantasque Sans Mono 10" -theme '/home/vimojnguoi/rofi/sidebar1.rasi'
+rofi -modi run,drun,window,ssh -lines 10 -padding 20 -width 50 -show drun -sidebar-mode -columns 3 -font "Fantasque Sans Mono 10" -theme '~/.config/rofi/sidebar2.rasi'
+#rofi -modi run,drun,window,ssh -lines 10 -padding 20 -width 50 -show drun -sidebar-mode -columns 3 -font "Fantasque Sans Mono 10" -theme '/home/vimojnguoi/rofi/sidebar2.rasi'
+
+#rofi -modi run,drun -show drun -location 1 -hide-scrollbar -show-icons -drun-icon-theme "Papirus" -font "Fantasque Sans Mono 10" -theme '/home/vimojnguoi/Desktop/rofi-themes-master/User Themes/sidetab.rasi'
