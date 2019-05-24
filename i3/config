@@ -35,34 +35,34 @@ bindsym $mod+Return exec gnome-terminal
 
 workspace_auto_back_and_forth yes
 
-exec_always /home/vimojnguoi/.config/polybar/launch.sh
+exec --no-startup-id /home/vimojnguoi/.config/polybar/launch.sh
 bindsym $mod+p exec /home/vimojnguoi/.config/polybar/launch.sh
 # kill focused window
 bindsym $mod+q kill
-exec_always xinput set-prop 13 286 1
-exec_always i3 border none
+exec --no-startup-id xinput set-prop 13 286 1
+exec --no-startup-id i3 border none
 #exec_always compton -b &
 #exec_always ulauncher
 #exec_always layout tabbed
-exec_always start-pulseaudio-x11
+exec --no-startup-id start-pulseaudio-x11
 #exec_always nm-applet
-exec --no-startup-id nm-applet
-exec_always clipit
-exec_always /usr/lib/at-spi2-core/at-spi-bus-launcher --launch-immediately
-exec_always blueberry-tray
-exec_always /usr/lib/blueberry/blueberry-obex-agent.py
-exec_always mate-power-manager
-#exec_always dconf write /org/mate/desktop/background/show-desktop-icons "false"
-#exec_always feh --randomize --bg-fill /home/vimojnguoi/Pictures/background/*
+#exec --no-startup-id nm-applet
+exec --no-startup-id clipit
+exec --no-startup-id /usr/lib/at-spi2-core/at-spi-bus-launcher --launch-immediately
+exec --no-startup-id blueberry-tray
+exec --no-startup-id /usr/lib/blueberry/blueberry-obex-agent.py
+exec --no-startup-id mate-power-manager
+#exec_always dconf w/mate/desktop/background/show-desktop-icons "false"
+#exec_always feh --r--bg-fill /home/vimojnguoi/Pictures/background/*
 # mot
-exec_always mate-volume-control-applet
-exec_always /usr/bin/gnome-keyring-daemon --start --components=pkcs11
-exec_always /usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1
-exec_always /usr/lib/at-spi2-core/at-spi-bus-launcher --launch-immediately
-exec_always /usr/bin/gnome-keyring-daemon --start --components=secrets
-exec_always /usr/bin/gnome-keyring-daemon --start --components=ssh
-exec_always /usr/bin/mate-settings-daemon
-exec_always mintinstall-update-flatpak
+exec --no-startup-id mate-volume-control-applet
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11
+exec --no-startup-id /usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1
+exec --no-startup-id /usr/lib/at-spi2-core/at-spi-bus-launcher --launch-immediately
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh
+exec --no-startup-id /usr/bin/mate-settings-daemon
+#exec_always mintinstall-update-flatpak
 #exec_always pasystray
 #exec_always /usr/lib/polkit-1/polkitd --no-debug
 #exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -71,6 +71,8 @@ bindsym $mod+d exec ~/.config/polybar/rmenu_1
 #bindsym $mod+f exec /home/vimojnguoi/.config/polybar/polybar-2/scripts/rmenu_wi_1
 bindsym $mod+s exec rofi -show windowcd -hide-scrollbar -padding 10 -line-padding 2 -disable-history  -lines 1 -width 100 -columns 20 -location 6 -theme '~/.config/rofi/ribbon.rasi'
 #bindsym $mod+F1 exec scrcpy -b 2M
+bindsym $mod+F1 exec ~/.config/i3/movepicturechrome.sh
+bindsym $mod+F12 exec mate-control-center
 bindsym $mod+Tab exec rofi -show window -location 1 -yoffset 30 -xoffset 0
 bindsym --release Print exec gnome-screenshot
 bindsym --release $mod+Print exec gnome-screenshot --interactive
